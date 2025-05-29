@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+h1{
+    font-size: 1.5em;
+   padding-top: 5em;
+}
+
+.dm-serif-text-regular {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-serif-text-regular-italic {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.hero-image01{
+    height: 50vh;
+    background-color: rgb(248, 231, 239);
+    background-image: url(image/yanagida01.jpeg);
+    background-size: cover;
+    background-position: center;
+     text-align: right;
+    
+}
+
+.hero-image02{
+    height: 50vh;
+    background-color: rgb(248, 231, 239);
+    background-image: url(image/yanagida02.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: contain;
+    background-position: center;
+}
+
+.hero-image03{
+    height: 100vh;
+    background-image: url(image/yanagida03.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.color{
+    height: 50px;
+    background-image: linear-gradient(100deg,rgba(222, 236, 96, 0.849),rgb(202, 44, 155),rgba(63, 28, 189, 0.705));
+}
