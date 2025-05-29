@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>画像の表示方法</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.0/destyle.css">
+    <link rel="stylesheet" href="lesson05-01.css">
+</head>
+
+<body>
+    <section class="hero-image">
+        <h2>01</h2>
+        <p>そのまま表示。<br>繰り返し表示なし。</p>
+        <p>画像のオリジナルサイズは600px x 400px</p>
+        <p class="blue">background-repeat: no-repeat;</p>
+    </section>
+    <section class="hero-image center">
+        <h2>02</h2>
+        <p>繰り返し表示なし。<br>中央揃え。</p>
+        <p class="blue">background-position: center center;</p>
+    </section>
+
+    <section class="hero-image center auto">
+        <h2>03</h2>
+        <p>繰り返し表示なし。<br>中央揃え。<br>サイズ → auto。</p>
+        <p>サイズはデフォルトがauto。</p>
+        <p class="blue">background-size: auto auto;</p>
+    </section>
+
+    <section class="hero-image center pixel">
+        <h2>04</h2>
+        <p>繰り返し表示なし。<br>中央揃え。<br>サイズ → ピクセルで指定。</p>
+        <p>横200px、縦100pxに固定。画像のアスペクト比は保たれない。</p>
+        <p class="blue">background-size: 200px 100px;</p>
+    </section>
+
+    <section class="hero-image center percent">
+        <h2>05</h2>
+        <p>繰り返し表示なし。<br>中央揃え。<br>サイズ → パーセントで指定。</p>
+        <p>横100%、縦100%を指定。画像のアスペクト比は保たれない。</p>
+        <p class="blue">background-size: 100% 100%;</p>
+    </section>
+
+    <section class="hero-image center contain">
+        <h2>06</h2>
+        <p>繰り返し表示なし。<br>中央揃え。<br>サイズ → contain。</p>
+        <p>サイズをcontainにすると、画像全体を含めるように表示する。画像のアスペクト比を保ち、表示領域の上下または左右にスキマがうまれがち。</p>
+        <p class="blue">background-size: contain;</p>
+    </section>
+
+    <section class="hero-image center cover">
+        <h2>07</h2>
+        <p>繰り返し表示なし。<br>中央揃え。<br>サイズ → cover。</p>
+        <p>サイズをcoverにすると、スキマができないように画像を表示する。画像のアスペクト比を保ち、画像の上下または左右が見切れがち。</p>
+        <p class="blue">background-size: cover;</p>
+    </section>
+
+    <section class="hero-image center fixed cover">
+        <h2>08</h2>
+        <p>繰り返し表示なし。<br>中央揃え。<br>サイズ → cover。</p>
+        <p>サイズをcoverにすると、スキマができないように画像を表示する。画像のアスペクト比を保ち、画像の上下または左右が見切れがち。</p>
+        <p>位置 → 固定。スクロールに追従しない。</p>
+        <p class="blue">background-size: cover;<br>background-attachment: fixed;</p>
+    </section>
+
+    <section class="hero-image-short">
+        <h2>07-02</h2>
+        <p>繰り返し表示なし。<br>中央揃え。<br>サイズ → cover。</p>
+        <p>07と同じcssをショートハンドで書く。</p>
+        <p class="blue">background-size: cover;</p>
+    </section>
+</body>
+
+</html>
