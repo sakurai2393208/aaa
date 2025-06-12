@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+/* スムーズスクロールを有効化 */
+html{
+  scroll-behavior: smooth;
+}
+
+/* ヘッダーのレイアウト設定 */
+header {
+  background-color:pink;
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* メニュー全体のスタイル */
+.menu {
+  background-color:rgb(243, 255, 255);
+  width: 60%;
+}
+
+/* メニューリストを横並びに */
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* .menu ul li{
+  display: inline-block;
+  padding: 1rem;
+} */
+
+/* ロゴ画像の最大高さを指定 */
+.logo{
+  max-height: 5rem;
+}
+
+/* メニューボタン（ハンバーガーアイコン）の基本スタイル */
+.menu-btn {
+  display: none;
+  /* background-color: red; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+/* メニューボタン内のバーのスタイル */
+.menu-btn span {
+  display: block;
+  width: 28px;
+  height: 4px;
+  margin: 2px 0;
+  background: #333;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* メインコンテンツの最大幅と中央寄せ */
+.container{
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* セクションの余白と背景色、テキスト両端揃え */
+section{
+  background-color:rgb(205, 205, 241);
+  margin: 3rem 0;
+  padding: 1rem;
+  text-align: justify;
+}
+
+/* セクションタイトルのスタイル */
+h2{
+  font-size: large;
+  font-weight: bold;
+}
+
+/* 画面幅600px以下でのレスポンシブ対応 */
+@media (max-width: 600px) {
+  /* スライドからコピペしてくる */
+  /* メニューを画面外に隠し、開いたときにスライドイン*/
+  .menu{
+position: fixed;
+top:0;
+right:-100vw;
+width: 70vw;
+height: 100vh;
+opacity: 0.9;
+transition: 0.3s;
+padding-top: 60px;
+z-index: 99;
+}
+/* メニューが開いた状態*/
+
+.menu.open{
+right:0;
+}
+
+/* メニューリストを縦並びに*/
+
+.menu ul{
+flex-direction: column;
+width: 100%;
+}
+/* メニュー項目のスタイル*/
+
+.menu ul li{
+width: 100%;
+text-align: center;
+padding: 1rem 2rem;
+}
+/* メニューボタンをflex表示に*/
+
+.menu-btn{
+display: flex;
+}
+ 
+/* メニューボタンが開いた時のアニメーション(1本目のバー) */
+.menu-btn.open span:nth-child(1) {
+transform: translateY(8px) rotate(45deg);
+}
+/* メニューボタンが開いた時のアニメーション(2本目のバーを消す) */
+.menu-btn.open span:nth-child(2) {
+opacity: 0;
+}
+/* メニューボタンが開いた時のアニメーション(3本目のバー) */
+.menu-btn.open span:nth-child(3) {
+transform: translateY(-8px) rotate(-45deg);
+}
+
+}
